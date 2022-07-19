@@ -14,10 +14,10 @@ RUN --mount=type=cache,target=/root/.m2 mvn -DskipTests -Dmaven.test.skip clean 
 ####
 ## create another image layer and run the app that was built
 ####
-FROM openjdk:11-jdk as process-application
+FROM openjdk:11-jdk as process-applicatio
 # Create app directory
 WORKDIR /usr/src/app
 # copy the built jar to the new image
 COPY --from=builder /usr/src/app/target/camunda-process-solution.1.0.0-SNAPSHOT.jar ${WORKDIR}
 # run the application
-ENTRYPOINT ["java","-Dspring.profiles.active=${PROFILES}","-Djava.security.egd=file:/dev/./urandom","-jar","/usr/src/app/*.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=${PROFILES}","-Djava.security.egd=file:/dev/./urandom","-jar","/usr/src/app/camunda-process-solution.1.0.0-SNAPSHOT.jar"]
