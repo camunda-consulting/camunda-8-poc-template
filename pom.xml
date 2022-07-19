@@ -84,6 +84,14 @@
       <artifactId>fluent-hc</artifactId>
     </dependency>
 
+    <!-- Lombok for entitiy configuration -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
+      <scope>provided</scope>
+    </dependency>
+
     <dependency>
       <!-- see: https://docs.camunda.io/docs/components/best-practices/development/testing-process-definitions/#writing-process-tests-in-java -->
       <groupId>io.camunda</groupId>

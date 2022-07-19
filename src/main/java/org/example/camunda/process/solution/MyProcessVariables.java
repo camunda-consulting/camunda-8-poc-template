@@ -1,50 +1,16 @@
 package org.example.camunda.process.solution;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class MyProcessVariables extends ProcessVariables {
 
   private String status;
   private String subject;
   private String email;
   private String message;
-  private String getSubject;
+  private String caseId;
 
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public String getSubject() {
-    return subject;
-  }
-
-  public void setSubject(String subject) {
-    this.subject = subject;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getMessage() {
-    return message;
-  }
-
-  public void setMessage(String mesasge) {
-    this.message = mesasge;
-  }
-
-  public String getGetSubject() {
-    return getSubject;
-  }
-
-  public void setGetSubject(String getSubject) {
-    this.getSubject = getSubject;
-  }
 }

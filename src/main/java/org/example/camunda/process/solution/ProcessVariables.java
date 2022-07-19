@@ -11,6 +11,7 @@ public class ProcessVariables {
 
   private String businessKey;
   private Boolean result;
+  private String processKey;
 
   public String getBusinessKey() {
     return businessKey;
@@ -28,6 +29,15 @@ public class ProcessVariables {
   public ProcessVariables setResult(Boolean result) {
     this.result = result;
     return this;
+  }
+
+  public String getProcessKey() {
+      return processKey;
+  }
+
+  public ProcessVariables setProcessKey(String processKey) {
+      this.processKey = processKey;
+      return this;
   }
 
   @Override
