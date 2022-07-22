@@ -2,6 +2,7 @@ package org.example.camunda.process.solution.worker;
 
 import io.camunda.zeebe.spring.client.annotation.ZeebeVariablesAsType;
 import io.camunda.zeebe.spring.client.annotation.ZeebeWorker;
+import org.example.camunda.process.solution.MyProcessVariables;
 import org.example.camunda.process.solution.ProcessVariables;
 import org.example.camunda.process.solution.service.MyService;
 import org.slf4j.Logger;
@@ -17,12 +18,12 @@ public class MyWorker {
   @Autowired private MyService myService;
 
   @ZeebeWorker(type = "my-service", autoComplete = true)
-  public ProcessVariables invokeMyService(@ZeebeVariablesAsType ProcessVariables variables) {
+  public ProcessVariables invokeMyService(@ZeebeVariablesAsType MyProcessVariables variables) {
     LOG.info("Invoking myService with variables: " + variables);
 
     boolean result = myService.myOperation(variables.getBusinessKey());
 
-    return new ProcessVariables()
+    return new MyProcessVariables()
         .setResult(result); // new object to avoid sending unchanged variables
   }
 }

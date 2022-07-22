@@ -3,7 +3,6 @@ package org.example.camunda.process.solution.facade;
 import io.camunda.zeebe.client.ZeebeClient;
 import org.example.camunda.process.solution.MyProcessVariables;
 import org.example.camunda.process.solution.ProcessConstants;
-import org.example.camunda.process.solution.ProcessVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

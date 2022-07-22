@@ -38,9 +38,7 @@ public class EmailWorker {
 
     emailService.sendSimpleMessage(emailTo, emailSubject, emailBody);
 
-    variables.setStatus("success");
-
-    return (MyProcessVariables)
-        new MyProcessVariables().setResult(true); // new object to avoid sending unchanged variables
+    // new object to avoid sending unchanged variables
+    return (MyProcessVariables) new MyProcessVariables().setStatus("success").setResult(true);
   }
 }

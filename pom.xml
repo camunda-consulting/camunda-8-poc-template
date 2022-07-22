@@ -71,13 +71,6 @@
       <artifactId>spring-boot-starter-mail</artifactId>
     </dependency>
 
-    <!-- JavaMail Simple Mail API -->
-    <dependency>
-      <groupId>org.simplejavamail</groupId>
-      <artifactId>simple-java-mail</artifactId>
-      <version>4.4.5</version>
-    </dependency>
-
     <!-- HTTP Client Fluent -->
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
