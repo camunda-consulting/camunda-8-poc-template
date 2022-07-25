@@ -31,6 +31,7 @@
           <zeebe:input source="= message" target="message" />
           <zeebe:output source="= message" target="message" />
         </zeebe:ioMapping>
+        <zeebe:assignmentDefinition assignee="= email" />
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1vbwje2</bpmn:incoming>
       <bpmn:outgoing>Flow_0xoo3ml</bpmn:outgoing>
@@ -66,6 +67,10 @@
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="send-email">
+      <bpmndi:BPMNEdge id="Flow_1vbwje2_di" bpmnElement="Flow_1vbwje2">
+        <di:waypoint x="480" y="160" />
+        <di:waypoint x="530" y="160" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0lmbpf1_di" bpmnElement="Flow_0lmbpf1">
         <di:waypoint x="340" y="160" />
         <di:waypoint x="380" y="160" />
@@ -82,19 +87,14 @@
         <di:waypoint x="195" y="160" />
         <di:waypoint x="240" y="160" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1vbwje2_di" bpmnElement="Flow_1vbwje2">
-        <di:waypoint x="480" y="160" />
-        <di:waypoint x="530" y="160" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent">
         <dc:Bounds x="159" y="142" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="165" y="185" width="24" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0sjzpdy_di" bpmnElement="Activity_049gr45">
-        <dc:Bounds x="240" y="120" width="100" height="80" />
-        <bpmndi:BPMNLabel />
+      <bpmndi:BPMNShape id="Activity_06u1rs5_di" bpmnElement="sendEmailTask">
+        <dc:Bounds x="670" y="120" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1oy8ygp_di" bpmnElement="EndEvent">
         <dc:Bounds x="832" y="142" width="36" height="36" />
@@ -102,11 +102,12 @@
           <dc:Bounds x="840" y="185" width="20" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_06u1rs5_di" bpmnElement="sendEmailTask">
-        <dc:Bounds x="670" y="120" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0s2tnku_di" bpmnElement="enterMessageTask">
         <dc:Bounds x="530" y="120" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0sjzpdy_di" bpmnElement="Activity_049gr45">
+        <dc:Bounds x="240" y="120" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0u9gkdh_di" bpmnElement="Activity_120wu15">
         <dc:Bounds x="380" y="120" width="100" height="80" />

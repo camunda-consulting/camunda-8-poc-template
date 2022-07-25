@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("user-data")
+@Profile("data")
 public class UserDataWorker {
 
   private static final Logger LOG = LoggerFactory.getLogger(Class.class.getName());
