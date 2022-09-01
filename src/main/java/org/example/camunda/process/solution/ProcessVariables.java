@@ -2,33 +2,20 @@ package org.example.camunda.process.solution;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 import org.apache.commons.lang3.builder.MultilineRecursiveToStringStyle;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+@Getter
+@Setter
+@Accessors(chain = true)
 @JsonInclude(Include.NON_NULL)
 public class ProcessVariables {
 
-  private String businessKey;
-  private Boolean result;
-
-  public String getBusinessKey() {
-    return businessKey;
-  }
-
-  public ProcessVariables setBusinessKey(String businessKey) {
-    this.businessKey = businessKey;
-    return this;
-  }
-
-  public Boolean getResult() {
-    return result;
-  }
-
-  public ProcessVariables setResult(Boolean result) {
-    this.result = result;
-    return this;
-  }
+  private String processKey;
 
   @Override
   public String toString() {
